@@ -1,0 +1,7 @@
+<h2>{{ view.title|default:"Formulario de Alumno" }}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'alumno_list' %}">Volver al listado</a>
